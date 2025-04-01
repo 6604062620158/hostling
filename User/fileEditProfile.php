@@ -2,10 +2,6 @@
 session_start();
 echo '<meta charset="utf-8">';
 include('../condb.php');
-// echo "<pre>";
-// print_r($_POST);
-// echo "</pre>";
-// exit();
 if ($_SESSION['m_level'] != 'admin') {
 }
 

@@ -8,7 +8,8 @@ if ($_SESSION['m_level'] != 'User') {
 	exit;
 }
 
-if (isset($_POST['Id_User'], $_POST['user_name'], $_POST['Surname'], $_POST['Age'], $_POST['Phone'], $_POST['Id_Booking'], $_POST['Message'], $_POST['rating'])) {
+if (isset($_POST['Id_User'], $_POST['user_name'], $_POST['Surname'], $_POST['Age'], $_POST['Phone']
+, $_POST['Id_Booking'], $_POST['Message'], $_POST['rating'])) {
 	$Id_User = mysqli_real_escape_string($con, $_POST["Id_User"]);
 	$user_name = mysqli_real_escape_string($con, $_POST["user_name"]);
 	$Surname = mysqli_real_escape_string($con, $_POST["Surname"]);
@@ -18,7 +19,7 @@ if (isset($_POST['Id_User'], $_POST['user_name'], $_POST['Surname'], $_POST['Age
 	$Message = mysqli_real_escape_string($con, $_POST["Message"]);
 	$rating = mysqli_real_escape_string($con, $_POST["rating"]);
 
-	// แสดงข้อมูลที่รับมา
+	
 	$sql = "INSERT INTO review
 	(
 	id_user,

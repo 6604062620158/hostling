@@ -254,23 +254,17 @@ $row2 = mysqli_fetch_array($result_t);
             <select name="status" class="input" required>
             <?php     if( $row["Statuss"] === "รอตรวจสอบการชำระเงิน" ){ ?>
 
-
-
                 <option value="">Adjust status</option>
                     <option value="รอทำสัญญา">รอทำสัญญา</option>
                     <option value="สำเร็จ">สำเร็จ</option>
                     <option value="ไม่สำเร็จ">ไม่สำเร็จ</option>
-
-                            
-
 
                 <?php    }else  if( $row["Statuss"] === "สำเร็จ"){ ?>
                            
                 <option value="<?php echo $row["Statuss"]?>"><?php echo $row["Statuss"]?></option>
                 <option value="ไม่สำเร็จ">ไม่สำเร็จ</option>
                 <option value="รอทำสัญญา">รอทำสัญญา</option>
-              
-                
+                    
                 <?php      } else  if( $row["Statuss"] === "ไม่สำเร็จ"){ ?>
                            
                            <option value="<?php echo $row["Statuss"]?>"><?php echo $row["Statuss"]?></option>

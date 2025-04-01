@@ -43,7 +43,7 @@ $currentPassword = $user["user_password"];
     <link href="./หน้าบ้าน/forgotpassword.css" rel="stylesheet">
 </head>
 
-<body>
+<body style=    "background-color: #E2EDD2;">
 
     <?php include('ตัวเสริม.php'); ?>
 

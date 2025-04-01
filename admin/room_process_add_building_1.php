@@ -51,42 +51,16 @@ if ($row_check > 0) {
     // เพิ่มข้อมูลใหม่
     $sql = "INSERT INTO room_building_1
             (
-                RoomNumber,
-                RoomSatatus,
-                Room_Dimensions,
-                MonthlyPrice,
-                ค่าไฟ,
-                ค่าน้ำ,
-                RoomSupplies,
-                building_1_id,
-                Building,
-                Room_img,
-                Room_img1,
-                Room_img2,
-                Room_img3,
-                Room_img4,
-                Room_img5,
-                Room_img6
+                RoomNumber, RoomSatatus, Room_Dimensions, MonthlyPrice, ค่าไฟ, ค่าน้ำ, RoomSupplies, 
+                building_1_id, Building, Room_img, Room_img1, Room_img2, Room_img3, Room_img4, Room_img5, Room_img6
             )
             VALUES
             (
-                '$RoomNumber',
-                '$RoomSatatus',
-                '$Room_Dimensions',
-                '$MonthlyPrice',
-                '$ค่าไฟ',
-                '$ค่าน้ำ',
-                '$RoomSupplies',
-                '$building_1_id',
-                '$Building',
-                '{$image_urls[0]}',
-                '{$image_urls[1]}',
-                '{$image_urls[2]}',
-                '{$image_urls[3]}',
-                '{$image_urls[4]}',
-                '{$image_urls[5]}',
-                '{$image_urls[6]}'
+                '$RoomNumber', '$RoomSatatus', '$Room_Dimensions', '$MonthlyPrice', '$ค่าไฟ', '$ค่าน้ำ', '$RoomSupplies',
+                '$building_1_id', '$Building', 
+                '" . implode("', '", array_map('addslashes', array_slice($image_urls, 0, 7))) . "'
             )";
+
 
     $result = mysqli_query($con, $sql) or die("Error in query: $sql " . mysqli_error($con));
     mysqli_close($con);
